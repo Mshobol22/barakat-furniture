@@ -8,7 +8,6 @@ export default function BarakatFurniture() {
       <nav className="sticky top-0 z-50 bg-white shadow-sm">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            {/* Logo placeholder - replacing the house icon with text for now if image missing */}
             <div className="text-2xl font-bold text-[#8B4513] flex items-center gap-2">
               <Sofa className="w-8 h-8" />
               <span>Barakat<span className="text-yellow-600">furniture</span></span>
@@ -124,9 +123,9 @@ export default function BarakatFurniture() {
               </div>
             </div>
 
-            {/* Room Card 2 */}
+            {/* Room Card 2 - UPDATED IMAGE */}
             <div className="group cursor-pointer relative overflow-hidden rounded-xl h-[400px]">
-              <img src="https://images.unsplash.com/photo-1505693416388-50346399435b?auto=format&fit=crop&q=80" alt="Bedroom" className="w-full h-full object-cover transition duration-500 group-hover:scale-110" />
+              <img src="https://images.unsplash.com/photo-1616594039964-40891a909d93?auto=format&fit=crop&q=80" alt="Bedroom" className="w-full h-full object-cover transition duration-500 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
                 <h3 className="text-white text-2xl font-bold">Bedroom</h3>
                 <p className="text-gray-300 mb-4">Beds, dressers & nightstands</p>
