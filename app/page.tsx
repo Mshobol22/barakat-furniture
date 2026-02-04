@@ -1,4 +1,3 @@
-import React from 'react';
 import { ShoppingBag, Star, Truck, ShieldCheck, Phone, Mail, MapPin, Facebook, Instagram, Twitter, ArrowRight, Sofa, Tag, Users } from 'lucide-react';
 
 export default function BarakatFurniture() {
@@ -125,7 +124,7 @@ export default function BarakatFurniture() {
 
             {/* Room Card 2 - UPDATED IMAGE */}
             <div className="group cursor-pointer relative overflow-hidden rounded-xl h-[400px]">
-              <img src="https://images.unsplash.com/photo-1616594039964-40891a909d93?auto=format&fit=crop&q=80" alt="Bedroom" className="w-full h-full object-cover transition duration-500 group-hover:scale-110" />
+              <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80" alt="Bedroom" className="w-full h-full object-cover transition duration-500 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
                 <h3 className="text-white text-2xl font-bold">Bedroom</h3>
                 <p className="text-gray-300 mb-4">Beds, dressers & nightstands</p>
