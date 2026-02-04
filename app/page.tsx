@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { ShoppingBag, Star, Truck, ShieldCheck, Phone, Mail, MapPin, Facebook, Instagram, Twitter, ArrowRight, Sofa, Tag, Users } from 'lucide-react';
 
 export default function BarakatFurniture() {
