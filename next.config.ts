@@ -2,9 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   typescript: {
-    // This allows the build to succeed even if there are type errors
+    // IGNORE all TypeScript errors so we can deploy fast
     ignoreBuildErrors: true,
   },
+  // Do NOT put an eslint section here, it causes crashes in Next.js 16
 };
 
 export default nextConfig;
