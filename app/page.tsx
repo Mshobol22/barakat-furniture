@@ -1,15 +1,20 @@
-import { ShoppingBag, Star, Truck, ShieldCheck, Phone, Mail, MapPin, Facebook, Instagram, Twitter, ArrowRight, Sofa, Tag, Users } from 'lucide-react';
+import { ShoppingBag, Star, Truck, ShieldCheck, Phone, Mail, MapPin, Facebook, Instagram, Twitter, ArrowRight, Sofa, Tag, Users, CreditCard, CheckCircle, Clock } from 'lucide-react';
 
-export default function BarakatFurniture() {
+export default function AmazingHomeFurniture() {
   return (
     <div className="min-h-screen bg-white font-sans text-gray-800">
+      {/* --- TOP ANNOUNCEMENT BAR --- */}
+      <div className="bg-gray-900 text-white text-xs font-medium py-2 px-4 text-center">
+        GRAND OPENING SALE: Up to 50% Off Select Items | Free Delivery in Chicago over $500
+      </div>
+
       {/* --- NAVIGATION --- */}
-      <nav className="sticky top-0 z-50 bg-white shadow-sm">
+      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <div className="text-2xl font-bold text-[#8B4513] flex items-center gap-2">
-              <Sofa className="w-8 h-8" />
-              <span>Barakat<span className="text-yellow-600">furniture</span></span>
+            <div className="text-2xl font-bold text-gray-900 flex items-center gap-2">
+              <Sofa className="w-8 h-8 text-[#8B4513]" />
+              <span>Amazing <span className="text-amber-600">Home</span> Furniture</span>
             </div>
           </div>
           
@@ -38,7 +43,7 @@ export default function BarakatFurniture() {
         </div>
         
         <div className="container mx-auto px-6 relative z-10 text-white">
-          <p className="text-[#d4a373] font-semibold tracking-wider mb-2 uppercase text-sm">Welcome to Barakat Furniture</p>
+          <p className="text-[#d4a373] font-semibold tracking-wider mb-2 uppercase text-sm">Welcome to Amazing Home Furniture</p>
           <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 max-w-2xl">
             Transform Your Home with Quality Furniture at Prices You'll Love
           </h1>
@@ -56,10 +61,135 @@ export default function BarakatFurniture() {
         </div>
       </section>
 
+      {/* --- WEEKLY HOT BUYS --- */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="flex justify-between items-end mb-8">
+            <div>
+              <span className="text-[#8B4513] font-bold text-sm uppercase tracking-wide">Deals</span>
+              <h2 className="text-3xl md:text-4xl font-bold mt-1 text-gray-900">Weekly Hot Buys</h2>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {/* Hot Buy Card 1 */}
+            <div className="group group/card relative bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=400&q=80" alt="Sectional Sofa" className="w-full h-full object-cover transition duration-500 group-hover/card:scale-105" />
+                <span className="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">SALE</span>
+                <div className="absolute inset-0 bg-black/0 group-hover/card:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                  <button className="opacity-0 group-hover/card:opacity-100 bg-white text-gray-900 text-sm font-semibold px-4 py-2 rounded shadow-lg transition-opacity duration-300 hover:bg-gray-100">
+                    Quick View
+                  </button>
+                </div>
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-900 text-sm md:text-base">Modern Sectional Sofa</h3>
+                <div className="mt-2 flex items-center gap-2">
+                  <span className="text-gray-400 text-sm line-through">$899</span>
+                  <span className="text-lg font-bold text-red-600">$499</span>
+                </div>
+              </div>
+            </div>
+            {/* Hot Buy Card 2 */}
+            <div className="group group/card relative bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?auto=format&fit=crop&w=400&q=80" alt="Dining Table" className="w-full h-full object-cover transition duration-500 group-hover/card:scale-105" />
+                <span className="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">SALE</span>
+                <div className="absolute inset-0 bg-black/0 group-hover/card:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                  <button className="opacity-0 group-hover/card:opacity-100 bg-white text-gray-900 text-sm font-semibold px-4 py-2 rounded shadow-lg transition-opacity duration-300 hover:bg-gray-100">
+                    Quick View
+                  </button>
+                </div>
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-900 text-sm md:text-base">Solid Wood Dining Table</h3>
+                <div className="mt-2 flex items-center gap-2">
+                  <span className="text-gray-400 text-sm line-through">$1,299</span>
+                  <span className="text-lg font-bold text-red-600">$649</span>
+                </div>
+              </div>
+            </div>
+            {/* Hot Buy Card 3 */}
+            <div className="group group/card relative bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=400&q=80" alt="Bedroom Set" className="w-full h-full object-cover transition duration-500 group-hover/card:scale-105" />
+                <span className="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">SALE</span>
+                <div className="absolute inset-0 bg-black/0 group-hover/card:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                  <button className="opacity-0 group-hover/card:opacity-100 bg-white text-gray-900 text-sm font-semibold px-4 py-2 rounded shadow-lg transition-opacity duration-300 hover:bg-gray-100">
+                    Quick View
+                  </button>
+                </div>
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-900 text-sm md:text-base">Queen Bed Frame</h3>
+                <div className="mt-2 flex items-center gap-2">
+                  <span className="text-gray-400 text-sm line-through">$699</span>
+                  <span className="text-lg font-bold text-red-600">$349</span>
+                </div>
+              </div>
+            </div>
+            {/* Hot Buy Card 4 */}
+            <div className="group group/card relative bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=400&q=80" alt="Accent Chair" className="w-full h-full object-cover transition duration-500 group-hover/card:scale-105" />
+                <span className="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">SALE</span>
+                <div className="absolute inset-0 bg-black/0 group-hover/card:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                  <button className="opacity-0 group-hover/card:opacity-100 bg-white text-gray-900 text-sm font-semibold px-4 py-2 rounded shadow-lg transition-opacity duration-300 hover:bg-gray-100">
+                    Quick View
+                  </button>
+                </div>
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-900 text-sm md:text-base">Velvet Accent Chair</h3>
+                <div className="mt-2 flex items-center gap-2">
+                  <span className="text-gray-400 text-sm line-through">$549</span>
+                  <span className="text-lg font-bold text-red-600">$279</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- FINANCING & TRUST BANNER --- */}
+      <section className="py-10 bg-gray-100 border-y border-gray-200">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-0">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-6 px-6 md:border-r border-gray-200">
+              <div className="w-14 h-14 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center shrink-0 text-[#8B4513]">
+                <CreditCard className="w-7 h-7" />
+              </div>
+              <div className="text-center md:text-left">
+                <h3 className="font-bold text-gray-900 text-lg">0% Interest Financing</h3>
+                <p className="text-gray-600 text-sm mt-0.5">Flexible payment plans available on qualifying purchases.</p>
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-6 px-6 md:border-r border-gray-200">
+              <div className="w-14 h-14 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center shrink-0 text-[#8B4513]">
+                <Truck className="w-7 h-7" />
+              </div>
+              <div className="text-center md:text-left">
+                <h3 className="font-bold text-gray-900 text-lg">Same-Day Local Delivery</h3>
+                <p className="text-gray-600 text-sm mt-0.5">Order by noon for delivery in the Chicago area today.</p>
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-6 px-6">
+              <div className="w-14 h-14 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center shrink-0 text-[#8B4513]">
+                <CheckCircle className="w-7 h-7" />
+              </div>
+              <div className="text-center md:text-left">
+                <h3 className="font-bold text-gray-900 text-lg">Price Match Guarantee</h3>
+                <p className="text-gray-600 text-sm mt-0.5">Find it for less? We&apos;ll match the price.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* --- VALUE PROPS --- */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6 text-center">
-          <span className="text-[#8B4513] font-bold text-sm uppercase tracking-wide">Why Barakat Furniture</span>
+          <span className="text-[#8B4513] font-bold text-sm uppercase tracking-wide">Why Amazing Home Furniture</span>
           <h2 className="text-4xl font-bold mt-2 mb-4 text-gray-900">Quality Meets Affordability</h2>
           <p className="text-gray-600 max-w-2xl mx-auto mb-16">
             Experience the perfect blend of exceptional craftsmanship, stunning designs, and prices that won't stretch your budget.
@@ -233,58 +363,77 @@ export default function BarakatFurniture() {
 
       {/* --- FOOTER --- */}
       <footer className="bg-[#4a3f35] text-gray-300 py-16">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-12 border-b border-gray-600 pb-12">
-            <div>
-              <div className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                 <Sofa className="w-6 h-6" /> Barakat
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 border-b border-gray-600 pb-12 mb-8">
+            <div className="min-w-0">
+              <div className="text-xl font-bold text-white mb-4 flex items-center gap-2 flex-wrap">
+                <Sofa className="w-6 h-6 shrink-0 text-amber-600" />
+                <span>Amazing <span className="text-amber-600">Home</span> Furniture</span>
               </div>
-              <p className="mb-6 leading-relaxed">
+              <p className="text-sm leading-relaxed mb-6 max-w-xs">
                 Quality furniture that transforms your house into a home. Exceptional service, unbeatable prices.
               </p>
-              <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center hover:bg-[#8B4513] transition"><Facebook className="w-5 h-5" /></a>
-                <a href="#" className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center hover:bg-[#8B4513] transition"><Instagram className="w-5 h-5" /></a>
-                <a href="#" className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center hover:bg-[#8B4513] transition"><Twitter className="w-5 h-5" /></a>
+              <div className="flex gap-3">
+                <a href="#" className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center hover:bg-[#8B4513] transition shrink-0" aria-label="Facebook"><Facebook className="w-5 h-5" /></a>
+                <a href="#" className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center hover:bg-[#8B4513] transition shrink-0" aria-label="Instagram"><Instagram className="w-5 h-5" /></a>
+                <a href="#" className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center hover:bg-[#8B4513] transition shrink-0" aria-label="Twitter"><Twitter className="w-5 h-5" /></a>
               </div>
             </div>
 
-            <div>
-              <h4 className="text-white font-bold text-lg mb-6">Quick Links</h4>
-              <ul className="space-y-4">
-                <li><a href="#" className="hover:text-[#8B4513] transition">Home</a></li>
-                <li><a href="#" className="hover:text-[#8B4513] transition">About Us</a></li>
-                <li><a href="#" className="hover:text-[#8B4513] transition">Products</a></li>
-                <li><a href="#" className="hover:text-[#8B4513] transition">Customer Reviews</a></li>
-                <li><a href="#" className="hover:text-[#8B4513] transition">Contact</a></li>
+            <div className="min-w-0">
+              <h4 className="text-white font-bold text-base mb-4">Quick Links</h4>
+              <ul className="space-y-3 text-sm">
+                <li><a href="#" className="hover:text-amber-500 transition block py-0.5">Home</a></li>
+                <li><a href="#" className="hover:text-amber-500 transition block py-0.5">About Us</a></li>
+                <li><a href="#" className="hover:text-amber-500 transition block py-0.5">Products</a></li>
+                <li><a href="#" className="hover:text-amber-500 transition block py-0.5">Customer Reviews</a></li>
+                <li><a href="#" className="hover:text-amber-500 transition block py-0.5">Contact</a></li>
               </ul>
             </div>
 
-            <div>
-              <h4 className="text-white font-bold text-lg mb-6">Shop</h4>
-              <ul className="space-y-4">
-                <li><a href="#" className="hover:text-[#8B4513] transition">Best Sellers</a></li>
-                <li><a href="#" className="hover:text-[#8B4513] transition">New Arrivals</a></li>
-                <li><a href="#" className="hover:text-[#8B4513] transition">Living Room</a></li>
-                <li><a href="#" className="hover:text-[#8B4513] transition">Bedroom</a></li>
-                <li><a href="#" className="hover:text-[#8B4513] transition">Dining Room</a></li>
+            <div className="min-w-0">
+              <h4 className="text-white font-bold text-base mb-4">Shop</h4>
+              <ul className="space-y-3 text-sm">
+                <li><a href="#" className="hover:text-amber-500 transition block py-0.5">Best Sellers</a></li>
+                <li><a href="#" className="hover:text-amber-500 transition block py-0.5">New Arrivals</a></li>
+                <li><a href="#" className="hover:text-amber-500 transition block py-0.5">Living Room</a></li>
+                <li><a href="#" className="hover:text-amber-500 transition block py-0.5">Bedroom</a></li>
+                <li><a href="#" className="hover:text-amber-500 transition block py-0.5">Dining Room</a></li>
               </ul>
             </div>
 
-            <div>
-              <h4 className="text-white font-bold text-lg mb-6">Contact Us</h4>
-              <ul className="space-y-4">
-                <li className="flex items-start"><MapPin className="w-5 h-5 mr-3 mt-1 shrink-0" /> 123 Furniture Street<br/>Chicago, IL 60601</li>
-                <li className="flex items-center"><Phone className="w-5 h-5 mr-3 shrink-0" /> (123) 456-7890</li>
-                <li className="flex items-center"><Mail className="w-5 h-5 mr-3 shrink-0" /> info@barakatfurniture.com</li>
-                <li className="flex items-start"><div className="w-5 h-5 mr-3 mt-1 shrink-0 text-center font-bold text-xs border rounded flex items-center justify-center">L</div> <div>Mon-Sat: 9AM-6PM<br/>Sun: 10AM-4PM</div></li>
+            <div className="min-w-0">
+              <h4 className="text-white font-bold text-base mb-4">Contact Us</h4>
+              <ul className="space-y-4 text-sm">
+                <li className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 shrink-0 mt-0.5 text-gray-400" />
+                  <a href="https://www.google.com/maps/search/?api=1&query=6639+N+Clark+St,+Chicago,+IL+60626" target="_blank" rel="noopener noreferrer" className="hover:text-amber-500 transition block leading-snug">
+                    <span className="block">6639 N Clark St</span>
+                    <span className="block">Chicago, IL 60626</span>
+                  </a>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Phone className="w-5 h-5 shrink-0 text-gray-400" />
+                  <a href="tel:+13123690425" className="hover:text-amber-500 transition">(312) 369-0425</a>
+                </li>
+                <li className="flex items-center gap-3 break-all">
+                  <Mail className="w-5 h-5 shrink-0 text-gray-400" />
+                  <a href="mailto:info@amazinghomefurniture.com" className="hover:text-amber-500 transition">info@amazinghomefurniture.com</a>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Clock className="w-5 h-5 shrink-0 mt-0.5 text-gray-400" />
+                  <span className="block leading-snug">
+                    <span className="block">Mon–Sat: 9AM–6PM</span>
+                    <span className="block">Sun: 10AM–4PM</span>
+                  </span>
+                </li>
               </ul>
             </div>
           </div>
-          
-          <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
-            <p>&copy; 2026 Barakat Furniture. All rights reserved.</p>
-            <div className="flex gap-6 mt-4 md:mt-0">
+
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+            <p className="text-center sm:text-left">&copy; 2026 Amazing Home Furniture. All rights reserved.</p>
+            <div className="flex gap-6">
               <a href="#" className="hover:text-white transition">Privacy Policy</a>
               <a href="#" className="hover:text-white transition">Terms of Service</a>
             </div>
